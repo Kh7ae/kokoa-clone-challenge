@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge3_Kang</title>
+
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+
+        body {
+            background-color: rgb(243, 240, 240);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            height: 100%;
+            margin: 0;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .container{
+        margin: 20px auto;
+        width:400px;
+        height:400px;
+        display:grid;
+        grid-template-columns: 200px 200px;
+        grid-row: auto auto;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        }
+    
+      .box {
+        height: 300px;
+        border: 8px solid white;
+      }
+
+      .box__text {
+        background-color: white;
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border: 8px solid white;
+        font-weight: bold;
+      }
+
+      .box:nth-child(1){
+        background-color:tomato;
+        padding-top:20px;
+        display:flex;
+        margin-top: 20px;
+        }
+
+        .box:nth-child(2){
+        background-color:teal;
+        padding-top:20px;
+        display:flex;
+        margin-top: 20px;
+        }
+
+        .box:nth-child(3){
+        background-color:burlywood;
+        padding-top:20px;
+        display:flex;
+        margin-top: 20px;
+        }
+
+        .box:nth-child(4){
+        background-color:thistle;
+        padding-top:20px;
+        display:flex;
+        margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">The Best Colors</header>
+    <div class="container">
+        <div class="box">
+        <div class="box__text">
+                Tomato
+                <br>
+                <br>
+                #FF6347
+        </div>
+        </div>
+        <div class="box">
+            <div class="box__text">
+                Teal
+                <br>
+                <br>
+                #008080
+            </div>
+        </div>
+        <div class="box">
+            <div class="box__text">
+                Burlywood
+                <br>
+                <br>
+                #DEB887
+            </div>
+        </div>
+        <div class="box">
+            <div class="box__text">
+                Thistle
+                <br>
+                <br>
+                #D7BfD7
+            </div>
+        </div>
+      </div>
+</body>
+
+</html>

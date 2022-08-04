@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge4_Kang</title>
+    <style>
+        body {
+            background-color:rgb(124, 200, 200);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .dots {
+            display: flex;
+            align-items: center;
+            animation: rotate 0.95s ease-in-out infinite;
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border-radius: 7.5px;
+            margin: 20px;
+        }
+
+        .boxs{
+            display: flex;
+            align-items: center;
+        }
+
+        .box{
+            width: 20px;
+            height: 100px;
+            background-color: white;
+            margin: 10px;
+            margin-top: 150px;
+            animation: loading 0.95s ease-in-out infinite;
+        }
+
+        .box:nth-child(1){
+            animation-delay: -0.1s;
+        }
+        .box:nth-child(2){
+            animation-delay: 0s;
+        }
+        .box:nth-child(3){
+            animation-delay: 0.1s;
+        }
+        .box:nth-child(4){
+            animation-delay: 0.2s;
+        }
+        .box:nth-child(5){
+            animation-delay: 0.3s;
+        }        
+
+        @keyframes rotate{
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+
+        @keyframes loading{
+            0%, 50% {
+                transform: scaleY(1);
+            }
+            25% {
+                transform: scaleY(1.7);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <div class="boxs">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
