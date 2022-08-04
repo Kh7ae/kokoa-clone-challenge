@@ -1,2 +1,3 @@
 # kokoa-clone-challenge
-To archive my challenge
+
+This repo is for archiving my challenge
