@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge7_Kang</title>
+    <script src="https://kit.fontawesome.com/028dac8207.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            padding-top: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: rgb(241, 196, 30);
+            width: 580px;
+        }
+
+        .header__status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 3px;
+        }
+
+        .header__status-bar span {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .header__search-bar{
+            position: relative;
+            width: 100%;
+        }
+
+        .header__search-bar input {
+            position: relative;
+            width: 100%;
+            height: 30px;
+            border: 1px solid #bbb;
+            border-radius: 30px;
+            padding: 10px 12px;
+            font-size: 14px;
+            left: -13px;
+            bottom: -30px;
+            box-shadow: 0 6px 6px -4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header__search-bar i {
+            position: absolute;
+            width: 17px;
+            top: 50px;
+            right: 3px;
+            margin: 0;
+        }
+
+        .book {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 580px;
+        }
+
+        .book__title {
+            margin-top: 60px;
+            font-weight: bold;
+        }
+
+        .book__info {
+            display: flex;
+        }
+
+        .book__info img {
+            width: 140px;
+            height: 220px;
+            border-radius: 20px;
+            margin-right: 25px;
+        }
+
+        .book__info__detail {
+            margin-top: -17px;
+        }
+
+        .book__info__detail h5 {
+            color: #bbb;
+            font-weight: 400;
+            margin-top: -15px;
+        }
+
+        .book__info__detail__category {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .book__info__detail__category div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(239, 234, 233);
+            border-radius: 5px;
+            width: 100px;
+            height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .book__info__detail__bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+        }
+
+        .bookmark {
+            background-color: rgb(241, 196, 30);
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .book-now {
+            width: 120px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: rgb(28, 27, 27);
+            color: white;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ranking {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 580px;
+        }
+
+        .ranking__title {
+            margin: 40px 0;
+        }
+
+        .ranking__info {
+            display: flex;
+        }
+
+        .ranking__info__detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ranking__info__detail img{
+            margin-right: 45px;
+            width: 100px;
+            height: 150px;
+            border-radius: 20px;
+            background-color: #bbb;
+        }
+
+        .ranking__info__detail__rate {
+            margin-right: 45px;
+            margin-top: 10px;
+        }
+
+        .ranking__info__detail__rate i {
+            font-size: 12px;
+        }
+
+        .popular {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 580px;
+        }
+
+        .author-info {
+            display: flex;
+            width: 520px;
+        }
+
+        .author-info img {
+            width: 150px;
+            height: 180px;
+            border-radius: 20px;
+            margin-right: 35px;
+        }
+
+        .author-detail {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: flex-start;
+
+            width: 500px;
+            height: 200px;
+        }
+
+        .author-detail h4 {
+            font-size: 20px;
+        }
+
+        .author-detail h6 {
+            font-size: 15px;
+            color: #bbb;
+            margin-top: -15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__status-bar">
+            <i class="fa-solid fa-align-left fa-xl"></i>
+            <span>library</span>
+            <i class="fa-solid fa-basket-shopping fa-xl"></i>
+        </div>
+
+        <div class="header__search-bar">
+            <input type="text" placeholder="  Search books ...."></input>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+
+    <div class="book">
+        <h2 class="book__title">
+            Book of the day
+        </h2>
+        <div class="book__info">
+            <img src="https://m.media-amazon.com/images/I/512eZ2k0z0L.jpg"/>
+            <div class="book__info__detail">
+                <h3>No Fixed Adobe</h3>
+                <h5>Journey Through</h5>
+                <div class="book__info__detail__rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="book__info__detail__category">
+                    <div>Journey</div>
+                    <div>Biography</div>
+                </div>
+
+                <div class="book__info__detail__bottom">
+                    <div class="bookmark">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </div>
+                    <div class="book-now">Book Now</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ranking">
+        <h2 class="ranking__title">
+            Top Adventures
+        </h2>
+
+        <div class="ranking__info">
+            <div class="ranking__info__detail">
+                <img src="https://image.aladin.co.kr/product/17355/44/cover500/0525556087_2.jpg" alt="">
+                <div class="ranking__info__detail__rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+            <div class="ranking__info__detail">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTokCw3fdSD1Q-R2sW1Y_aMUcZ04HsWW9Sfzw&usqp=CAU" alt="">
+                <div class="ranking__info__detail__rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+            <div class="ranking__info__detail">
+                <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/action-thriller-book-cover-design-template-3675ae3e3ac7ee095fc793ab61b812cc_screen.jpg?ts=1637008457" alt="">
+                <div class="ranking__info__detail__rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+            <div class="ranking__info__detail">
+                <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/yellow-business-leadership-book-cover-design-template-dce2f5568638ad4643ccb9e725e5d6ff.jpg?ts=1637017516" alt="">
+                <div class="ranking__info__detail__rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popular">
+        <h2 class="ranking__title">
+            Popular authors
+        </h2>
+        <div class="author-info">
+            <img src="https://cdn.britannica.com/05/223205-050-8931FF28/American-writer-George-RR-Martin-2011.jpg" alt="">
+            <div class="author-detail">
+                <h4>George Raymond Richard Martin</h4>
+                <h6>Modern Amercian science fiction writer, screenwriter, producer and editor, winner of many liteary awards.</h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
